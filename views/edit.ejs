@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<form class="glass" method="POST" action="/update/<%= user.id %>">
+  <input name="first_name" value="<%= user.first_name %>">
+  <input name="last_name" value="<%= user.last_name %>">
+  <input name="email" value="<%= user.email %>">
+  <input name="gender" value="<%= user.gender %>">
+  <input name="job_title" value="<%= user.job_title %>">
+  <button>Update User</button>
+</form>
+
+<%- include('partials/footer') %>

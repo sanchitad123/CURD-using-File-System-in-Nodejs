@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<h1 class="page-title">Users</h1>
+
+<div class="grid">
+
+<% users.forEach(user => { %>
+
+<div class="card userCard">
+
+<h3><%= user.first_name %> <%= user.last_name %></h3>
+
+<p>📧 <%= user.email %></p>
+
+<p>💼 <%= user.job_title %></p>
+
+<div class="actions">
+
+<a href="/edit/<%= user.id %>" class="edit">Edit</a>
+
+<form method="POST" action="/delete/<%= user.id %>">
+<button class="delete">Delete</button>
+</form>
+
+</div>
+
+</div>
+
+<% }) %>
+
+</div>
+
+<%- include('partials/footer') %>
